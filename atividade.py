@@ -3,20 +3,20 @@ atividades = []  # Essa lista vai guardar todas as atividades cadastradas pelos 
 
 modalidades = ("Ciclismo", "Corrida/Caminhada") # geralmente usamos quando os valores são fixos.
 
-def calcular_pontos(modalidade, distancia, commute):
+def calcular_pontos(modalidade, distancia, commute): 
     if modalidade == "Ciclismo":
         if commute == "S":
             pontos = distancia * 12
         else:
             pontos = distancia * 8
 
-    elif modalidade == "Corrida/Caminhada":
+    elif modalidade == "Corrida/Caminhada": 
         if commute == "S":
             pontos = distancia * 9
         else:
             pontos = distancia * 6
 
-    return pontos
+    return pontos 
 
 
 def registrar_atividade(): # cadastro de uma atividade.
@@ -111,7 +111,8 @@ def mostrar_dashboard(): # pontos totais de um usuário.
         print("Nível: Mestre SoulMove")
 
 
-def menu():
+def menu(): 
+
     while True:
         print("\n====== SOULMOVE ======")
         print("1 - Registrar atividade")
@@ -135,8 +136,8 @@ def menu():
                 print("Saindo do sistema...")
                 break
 
-            case _:
+            case _: # vazio 
                 print("Opção inválida. Escolha uma opção de 1 a 4.")
 
 
-menu()
+menu() # chama a função menu para iniciar o programa.
