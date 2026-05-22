@@ -1,7 +1,7 @@
 
-atividades = []  # Essa lista vai guardar todas as atividades cadastradas pelos usuários.
+atividades = []  # lista que vai guardar todas as atividades cadastradas pelos usuários.
 
-modalidades = ("Ciclismo", "Corrida/Caminhada") # geralmente usamos quando os valores são fixos.
+modalidades = ("Ciclismo", "Corrida/Caminhada") # tupla que nao pode ser alterada
 
 def calcular_pontos(modalidade, distancia, commute): 
     if modalidade == "Ciclismo":
@@ -16,15 +16,15 @@ def calcular_pontos(modalidade, distancia, commute):
         else:
             pontos = distancia * 6
 
-    return pontos 
+    return pontos
 
 
-def registrar_atividade(): # cadastro de uma atividade.
+def registrar_atividade():
     print("\n--- Registrar Atividade ---")
 
     nome = input("Digite seu nome: ")
 
-    if nome == "": # Verifica se o nome ficou vazio.
+    if nome == "": # verifica se o nome ficou vazio.
         print("Erro: o nome não pode ficar vazio.")
         return
 
@@ -35,7 +35,7 @@ def registrar_atividade(): # cadastro de uma atividade.
     opcao_modalidade = input("Digite a opção: ")
 
     if opcao_modalidade == "1":
-        modalidade = modalidades[0] # Se escolheu 1, a modalidade será o primeiro item da tupla.
+        modalidade = modalidades[0] # se escolheu 1, a modalidade será o primeiro item da tupla.
 
     elif opcao_modalidade == "2":
         modalidade = modalidades[1]
@@ -112,7 +112,6 @@ def mostrar_dashboard(): # pontos totais de um usuário.
 
 
 def menu(): 
-
     while True:
         print("\n====== SOULMOVE ======")
         print("1 - Registrar atividade")
